@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Add_fine">
+
+    <ListView
+        android:id="@+id/listview11"
+        android:layout_width="359dp"
+        android:layout_height="336dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.222"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+    <TextView
+        android:id="@+id/textView_total_fine"
+        android:layout_width="130dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="36dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_total_fine" />
+
+    <TextView
+        android:id="@+id/textView_total_fine_view"
+        android:layout_width="152dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginEnd="8dp"
+        android:text="TOTAL FINE:"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/color_first"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_total_fine"
+        app:layout_constraintEnd_toStartOf="@+id/textView_total_fine"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView_total_fine"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="124dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:text="OFFENCE"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView17" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="87dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="36dp"
+        android:text="FINE AMOUNT"
+        android:textAlignment="textEnd"
+        android:textAllCaps="true"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="18dp" />
+
+    <Button
+        android:id="@+id/button_total_fine"
+        android:layout_width="196dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="8dp"
+        android:text="total fine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.462"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listview11" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

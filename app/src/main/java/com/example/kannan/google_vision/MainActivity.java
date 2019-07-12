@@ -2,6 +2,7 @@ package com.example.kannan.google_vision;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
@@ -31,24 +32,12 @@ import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
 
-//    String cameraPermission[];
-//    String storagePermission[];
-//
-//
-//    private static final int CAMERA_REQUEST_CODE = 200;
-//    private static final int STORAGE_REQUEST_CODE = 400;
-//    private static final int IMAGE_GALLERY_CODE = 1000;
-//    private static final int IMAGE_CAMERA_CODE = 1001;
 
-   // TextView content;
     EditText tv_result;
     ImageView imageHolder;
-   // Button gallery;
-   // Button capturedImageButton;
     private Uri image_uri;
     private String received_number;
-//    private String imageFileName;
-    Button message;
+    Button message,offence;
     ListView lv;
 
     ArrayList<HashMap<String, String>> contactList;
@@ -67,13 +56,11 @@ public class MainActivity extends AppCompatActivity {
         received_number =   getIntent().getExtras().getString(("number"));
 
 
-       // gallery = (Button) findViewById(R.id.button3);
         tv_result = (EditText) findViewById(R.id.recognizeResult);
         imageHolder = (ImageView) findViewById(R.id.captured_photo);
-       // Button capturedImageButton = (Button) findViewById(R.id.photo_button);
         message=(Button)findViewById(R.id.save) ;
-        //content=(TextView)findViewById(R.id.textView);
        lv = (ListView) findViewById(R.id.list);
+       offence=(Button)findViewById(R.id.offence);
 
        imageHolder.setImageURI(image_uri);
        lv.setVisibility(View.INVISIBLE);
@@ -137,6 +124,14 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
        });
+      offence.setOnClickListener(new Button.OnClickListener() {
+
+                                       public void onClick(View v) {
+
+                                           Intent intent=new Intent(getApplicationContext(),Offence.class);
+                                           startActivity(intent);
+                                       }
+                                   });
 
 
 
@@ -175,11 +170,11 @@ public class MainActivity extends AppCompatActivity {
     {
 
         // Create data variable for sent values to server
-        new GetContacts().execute();
+        new GetContacts().execute(received_number);
     }
 
 
-  public class GetContacts extends AsyncTask<Void, Integer, String> {
+  public class GetContacts extends AsyncTask<String, Integer, String> {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
@@ -191,10 +186,10 @@ public class MainActivity extends AppCompatActivity {
 
 
         @Override
-        protected String doInBackground(Void... arg0) {
+        protected String doInBackground(String... arg0) {
             HttpHandler sh = new HttpHandler();
             // Making a request to url and getting response
-           String url="http://www.mocky.io/v2/5d0728d63000009c54051dce?NUMBER="+tv_result.getText().toString();
+           String url="http://www.mocky.io/v2/5d0728d63000009c54051dce?NUMBER="+arg0;
 
            // String url = "https://api.androidhive.info/contacts/";
             String jsonStr = sh.makeServiceCall(url);

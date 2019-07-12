@@ -11,25 +11,24 @@
         android:layout_width="382dp"
         android:layout_height="114dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
         android:fitsSystemWindows="true"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.615"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/keralapolice" />
 
     <EditText
         android:id="@+id/recognizeResult"
-        android:layout_width="307dp"
-        android:layout_height="102dp"
+        android:layout_width="367dp"
+        android:layout_height="72dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.541"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/captured_photo"
         app:layout_constraintVertical_bias="0.0" />
@@ -47,33 +46,37 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/recognizeResult" />
 
-    <!--<TextView-->
-        <!--android:id="@+id/textView"-->
-        <!--android:layout_width="177dp"-->
-        <!--android:layout_height="145dp"-->
-        <!--android:layout_marginStart="11dp"-->
-        <!--android:layout_marginTop="60dp"-->
-        <!--android:layout_marginEnd="8dp"-->
-        <!--android:text="TextView"-->
-        <!--app:layout_constraintEnd_toEndOf="parent"-->
-        <!--app:layout_constraintHorizontal_bias="0.6"-->
-        <!--app:layout_constraintStart_toEndOf="@+id/recognizeResult"-->
-        <!--app:layout_constraintTop_toBottomOf="@+id/captured_photo" />-->
-
 
     <ListView
         android:id="@+id/list"
-        android:layout_width="352dp"
-        android:layout_height="479dp"
+        android:layout_width="353dp"
+        android:layout_height="468dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/captured_photo" />
+
+    <Button
+        android:id="@+id/offence"
+        android:layout_width="246dp"
+        android:layout_height="48dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="16dp"
+        android:background="@drawable/style_1"
+        android:text="add offence"
+        android:textAlignment="center"
+        android:textColor="@color/color_first"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/captured_photo"
+        app:layout_constraintTop_toBottomOf="@+id/list"
         app:layout_constraintVertical_bias="1.0" />
 
 

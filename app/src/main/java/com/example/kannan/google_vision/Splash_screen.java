@@ -22,7 +22,7 @@ public class Splash_screen extends AppCompatActivity {
             public void run() {
                 try {
                     sleep(3000);
-                    Intent intent=new Intent(getApplicationContext(),First_Page.class);
+                    Intent intent=new Intent(getApplicationContext(),Login.class);
                     startActivity(intent);
                     finish();
                 } catch (InterruptedException e) {

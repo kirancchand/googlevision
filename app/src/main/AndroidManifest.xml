@@ -15,7 +15,8 @@
         android:supportsRtl="true"
         android:testOnly="false"
         android:theme="@style/AppTheme">
-
+        <activity android:name=".Add_fine"></activity>
+        <activity android:name=".Offence" />
         <activity
             android:name=".Splash_screen"
             android:theme="@style/AppTheme.NoActionBar">
@@ -42,7 +43,7 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".Login" />
         <activity android:name=".First_Page" />
-
+        <activity android:name=".Register" />
     </application>
 
 </manifest>

@@ -4,25 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/color_second"
     tools:context=".Login">
 
     <EditText
-        android:id="@+id/Password"
+        android:id="@+id/dob"
         android:layout_width="276dp"
         android:layout_height="59dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="4dp"
-
-        android:layout_marginEnd="8dp"
-        android:hint="PASSWORD"
-        android:inputType="textPassword"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/style_1"
+        android:hint="   CUG NUMBER"
+        android:inputType="number"
         android:textAlignment="textStart"
-        android:textAppearance="@style/TextAppearance.AppCompat"
         android:textColor="@color/colorPrimary"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Username" />
+        android:textColorHint="@color/color_first"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/pen"
+        app:layout_constraintStart_toStartOf="@+id/pen"
+        app:layout_constraintTop_toBottomOf="@+id/pen" />
 
     <Button
         android:id="@+id/login"
@@ -36,35 +35,62 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Password"
+        app:layout_constraintTop_toBottomOf="@+id/dob"
         app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
-        android:id="@+id/Dialog"
-        android:layout_width="320dp"
-        android:layout_height="33dp"
+    <EditText
+        android:id="@+id/pen"
+        android:layout_width="276dp"
+        android:layout_height="54dp"
+
+        android:layout_marginTop="64dp"
+        android:background="@drawable/style_1"
+        android:hint="   PEN NUMBER"
+        android:inputType="number"
+        android:textColorHint="@color/color_first"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView6"
+        app:layout_constraintStart_toStartOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <Button
+        android:id="@+id/register"
+        android:layout_width="380dp"
+        android:layout_height="57dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:text="Enter Correct Username and Password "
-        android:textColor="?attr/colorError"
-        android:textSize="18sp"
-        android:visibility="invisible"
+        android:text="Not a member. Sign up now"
+        android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.833"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Password" />
+        app:layout_constraintTop_toBottomOf="@+id/login" />
 
-    <EditText
-        android:id="@+id/Username"
-        android:layout_width="276dp"
-        android:layout_height="54dp"
+    <Button
+        android:id="@+id/chumma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="184dp"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="8dp"
+        android:text="skipp>>>"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.973"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register" />
 
-        android:hint="USERNAME"
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="218dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="8dp"
+        android:text="LOGIN NOW"
+        android:textColor="@color/color_first"
+        android:textAlignment="center"
         android:textSize="24sp"
+        android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
